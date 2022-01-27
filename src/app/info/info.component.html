@@ -1,0 +1,45 @@
+<div class="info-page">
+    <h1>Please fill in the following details</h1>
+    <form #infoForm="ngForm" style="padding-bottom: 0;">
+        <div class="form-group">
+            <label for="namde">Your Name</label>
+            <input required type="text" name="name" [(ngModel)]="info.name" class="form-control" id="namde" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="andrewId">Your Andrew ID</label>
+            <input required type="email" name="alias" [(ngModel)]="info.alias" class="form-control" id="andrewId"
+                placeholder="Enter ANDREW ID">
+        </div>
+        <div class="form-group">
+            <label for="type">Participant Type</label>
+            <select required class="form-control" [(ngModel)]="info.type" name="type">
+                <option *ngFor="let option of participantTypes" [value]="option.text">{{option.text}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="device">Device</label>
+            <select required class="form-control" [(ngModel)]="info.device" name="device">
+                <option *ngFor="let option of deviceTypes" [value]="option">{{option}}</option>
+            </select>
+            <small id="emailHelp" class="form-text text-muted"> (i.e. touchpad, mouse...):</small>
+        </div>
+        <div class="form-group" >
+            <label for="deviceDetails">Device Details</label>
+            <input required type="email" name="alias" [(ngModel)]="info.deviceDetails" class="form-control" id="deviceDetails"
+                placeholder="Enter Details">
+            <small id="emailHelp" class="form-text text-muted">Add some more details for this device type like make, model, size etc.</small>
+        </div>
+        <div class="form-group">
+            <label for="experience">Level of Experience </label>
+            <select required class="form-control" [(ngModel)]="info.experience" name="experience">
+                <option *ngFor="let option of experienceTypes" [value]="option">{{option}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="deviceDiagonal">Screen Diagonal (in inches)</label>
+            <input required type="number" name="deviceDiagonal" [(ngModel)]="info.deviceDiagonal" class="form-control" id="deviceDiagonal">
+        </div>
+    </form>
+    <button style="margin-top: 15px;" class="btn-main" [disabled]="!infoForm.valid" (click)="demo()">Demo Run</button>
+    <button style="margin-top: 15px;" class="btn-main" [disabled]="!infoForm.valid" (click)="next()">Formal Run</button>
+</div>
