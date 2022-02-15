@@ -57,7 +57,6 @@
     "@angular/compiler-cli": "7.1.4",
     "@angular/language-service": "7.1.4",
     "@types/d3": "^5.7.0",
-    "@types/jest": "^27.4.0",
     "@types/lodash": "^4.14.119",
     "@types/mongodb": "^3.1.17",
     "@types/node": "^8.0.30",
