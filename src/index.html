@@ -299,7 +299,7 @@
      */
     function listMajors() {
       gapi.client.sheets.spreadsheets.values.get({
-        spreadsheetId: '1vdTH3JwYBJctWDPWnCYn1eNKfnrCzPOq3yoyShDA6hI', //'1LN7pXxtIvvF2QgRfmj1i5owC0ygRIi2kqJb1nirk1bA',
+        spreadsheetId: "1KLik7pOTX0xjJl_vD00sAUYx7UjioUGBPujPqB10GDY", //'1vdTH3JwYBJctWDPWnCYn1eNKfnrCzPOq3yoyShDA6hI', //'1LN7pXxtIvvF2QgRfmj1i5owC0ygRIi2kqJb1nirk1bA',
         range: 'Runs!A2:K',
       }).then(function (response) {
         var range = response.result;
